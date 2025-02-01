@@ -21,3 +21,15 @@ function mostrarAmigos(){
         lista.appendChild(elemento);
     });
 }
+
+function sortearAmigo(){
+    if (amigos.length != 0){
+        let indice = Math.floor(Math.random() * amigos.length);
+        let amigoSecreto = amigos[indice];
+        let resultado = document.getElementById("resultado");
+        resultado.innerHTML = "";
+        let valor = document.createElement("li");
+        valor.textContent = amigoSecreto;
+        resultado.appendChild(valor);
+    }
+}
