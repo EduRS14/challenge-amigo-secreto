@@ -9,4 +9,15 @@ function agregarAmigo() {
         amigos.push(nombre);
     }
     document.getElementById("amigo").value = "";
+    mostrarAmigos();
+}
+
+function mostrarAmigos(){
+    let lista = document.getElementById("listaAmigos");
+    lista.innerHTML = "";
+    amigos.forEach(nombre => {
+        let elemento = document.createElement("li");
+        elemento.textContent = nombre;
+        lista.appendChild(elemento);
+    });
 }
